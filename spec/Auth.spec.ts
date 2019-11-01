@@ -9,7 +9,7 @@ import { pErr, pwdSaltRounds, jwtCookieProps, loginFailedErr } from '@shared';
 import { UserDao } from '@daos';
 
 
-describe('UserRouter', () => {
+describe('AuthRouter', () => {
 
     const authPath = '/api/auth';
     const loginPath = `${authPath}/login`;
