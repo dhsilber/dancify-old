@@ -30,7 +30,7 @@ const staticDir = path.join(__dirname, 'public');
 app.use(express.static(staticDir));
 
 app.get('/', (req: Request, res: Response) => {
-    res.sendFile('login.html', {root: viewsDir});
+    res.sendFile('index.html', {root: viewsDir});
 });
 
 app.get('/users', (req: Request, res: Response) => {
