@@ -17,6 +17,7 @@ describe('Index page', () => {
             button = document.getElementById('authenticate-btn')
             done()
         })
+
         it('should exist"', (done) => {
             expect(button).not.toBeNull()
             done();
@@ -31,6 +32,29 @@ describe('Index page', () => {
             }
             done();
         })
-
     })
+
+    describe('login button', () => {
+        let button: HTMLElement | null
+        beforeAll((done) => {
+            button = document.getElementById('login-btn')
+            done()
+        })
+
+        it('should exist"', (done) => {
+            expect(button).not.toBeNull()
+            done();
+        })
+
+        it('should have proper label', (done) => {
+            if (!button) {
+                fail("Login button missing, so has no name")
+            }
+            else {
+                expect(button.textContent).toEqual("Login")
+            }
+            done();
+        })
+    })
+
 })
