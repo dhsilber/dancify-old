@@ -23,6 +23,12 @@ describe('Index page', () => {
             done();
         })
 
+        it('should actually be a button"', (done) => {
+            let buttonType = Object.prototype.toString.call(button)
+            expect(buttonType).toEqual("[object HTMLButtonElement]")
+            done();
+        })
+
         it('should have proper label', (done) => {
             if (!button) {
                 fail("Authenticate button missing, so has no name")
@@ -43,6 +49,12 @@ describe('Index page', () => {
 
         it('should exist"', (done) => {
             expect(button).not.toBeNull()
+            done();
+        })
+
+        it('should actually be a button"', (done) => {
+            let buttonType = Object.prototype.toString.call(button)
+            expect(buttonType).toEqual("[object HTMLButtonElement]")
             done();
         })
 
